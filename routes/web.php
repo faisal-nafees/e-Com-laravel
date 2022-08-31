@@ -22,4 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/login', 'login');
 
 Route::post('/login', [UserController::class, 'login']);
+Route::get('/logout', [UserController::class, 'logout']);
 Route::get('/', [ProductController::class, 'index']);
+Route::get('/detail/{id}', [ProductController::class, 'detail']);
+Route::get('/search', [ProductController::class, 'search']);
+Route::post('/add-to-cart', [ProductController::class, 'addToCart']);
