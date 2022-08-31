@@ -17,7 +17,7 @@
                         <img class="trending-img" src="{{$product->gallery}}" class="d-block w-100" alt="...">
                         <div class="">
                         <h2>{{$product->name}}</h2>
-                        <h4>{{$product->price}}</h4>
+                        <h4>₹{{$product->price}}</h4>
                         <h5>{{$product->description}}</h5>
                         </div>
                     </a>

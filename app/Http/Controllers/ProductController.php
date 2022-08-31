@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -45,5 +46,16 @@ class ProductController extends Controller
         // $user_id = session()->get('user')['id'];
         // $items = Cart::where('user_id',$user_id)->get();
         // return count($items);
+    }
+
+    public function cartList(){
+        $userId = Session::get('user')->id;
+        $data = DB::table('carts')
+        ->join('products', 'carts.product_id', 'products.id')
+        ->select('products.*')
+        ->where('carts.user_id', $userId)
+        ->get();
+
+        return view('cartlist', ['products'=>$data]);
     }
 }

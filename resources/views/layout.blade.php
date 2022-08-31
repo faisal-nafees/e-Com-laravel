@@ -37,7 +37,12 @@
         width: 500px; !important
       }
       .searched-wrapper{
-        padding: 20px
+        padding: 20px;
+      }
+      .cart-list-divider{
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 20px;
+
       }
     </style>
   </head>
