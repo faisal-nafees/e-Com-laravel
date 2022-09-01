@@ -23,6 +23,8 @@ Route::view('/login', 'login');
 
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/register', [UserController::class, 'register']);
+Route::post('/register', [UserController::class, 'create']);
 Route::get('/', [ProductController::class, 'index']);
 Route::get('/detail/{id}', [ProductController::class, 'detail']);
 Route::get('/search', [ProductController::class, 'search']);
