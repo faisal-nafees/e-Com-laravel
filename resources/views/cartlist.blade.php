@@ -31,5 +31,6 @@
                 </div>              
             </div>
         </div>
+        <a href="/ordernow" class="btn btn-success mb-3">Order Now</a>
   </div>
 @endsection
